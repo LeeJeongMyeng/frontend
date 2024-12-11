@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { useDispatch } from 'react-redux';
@@ -7,6 +7,9 @@ import { registerUser } from '../../store/userSlice.js';
 const RegisterPage = () => {
 	const navigate = useNavigate();
 	const dispatch = useDispatch();
+	useEffect(() => {
+		
+	}, []);
 	const {
 		      register,
 		      handleSubmit,
