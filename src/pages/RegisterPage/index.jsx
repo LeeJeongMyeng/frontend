@@ -7,6 +7,7 @@ import { registerUser } from '../../store/userSlice.js';
 const RegisterPage = () => {
 	const navigate = useNavigate();
 	const dispatch = useDispatch();
+
 	useEffect(() => {
 		
 	}, []);
@@ -18,7 +19,6 @@ const RegisterPage = () => {
 	      } = useForm({ mode: 'onChange' });
 	
 	const onSubmit = ({ email, password, name }) => {
-		console.log('dadadadadad');
 		const body = {
 			email: email,
 			password: password,
@@ -96,7 +96,7 @@ const RegisterPage = () => {
 					
 					<p className={'mt-8 text-xs font-light text-center'}>
 						아이디가 있다면?{' '}
-						<a href={'/login'}
+						<a onClick={() => navigate('/login')}
 						   className={'font-bold hover:underline hover:cursor-pointer'}>로그인</a>
 					</p>
 				</form>
